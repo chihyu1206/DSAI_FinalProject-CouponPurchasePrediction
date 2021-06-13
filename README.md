@@ -6,13 +6,14 @@ Environment: Windows 10
 Python version: 3.8
 
 ## Environment Setting
+```
 $ pip install -r requirement.txt
-
+```
 ## Run the program
 [usage] 
-
+```
 $ python data.py --re_train False --train train.csv --sample_number 100000 --re_test False --test test.csv 
-
+```
 (The execution of data.py is optional because the data has been generated in repo.)
 
 Argument List:
