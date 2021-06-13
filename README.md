@@ -10,6 +10,7 @@ Environment: Windows 10 + Anaconda 3
 ## Run the program
 [usage] 
 $ python data.py --re_train False --train train.csv --sample_number 100000 --re_test False --test test.csv
+
 Argument List:
 * --re_train: Generate a new train file generated randomly. (True of False. default: False)
 * --train: if "--re_train" is needed, assign a output path for the training file.(path/to/train, default: "train.csv")
