@@ -1,9 +1,9 @@
 # DSAI_FinalProject-CouponPurchasePrediction
 Final Project of NCKU DSAI Course: Coupon Purchase Prediction
 
-Environment: Windows 10
-
-Python version: 3.8
+OS: Windows 10
+CPU: Intel i7-9700K
+Python version: 3.8.8
 
 ## Environment Setting
 ```
@@ -12,13 +12,12 @@ $ pip install -r requirement.txt
 ## Run the program
 [usage] 
 ```
-$ python data.py --re_train False --train train.csv --sample_number 100000 --re_test False --test test.csv 
+$ python data.py
 ```
-(The execution of data.py is optional because the data has been generated in repo.)
-
+(The execution of data.py is optional because the required data has been generated in repo and it takes about 45 minutes to finish.)
+```
+$ python main.py --option predict --output submission.csv
+```
 Argument List:
-* --re_train: Generate a new train file sampled randomly. (True or False. default: False)
-* --train: if "--re_train" is needed, assign a output path for the training file. (path/to/train, default: "train.csv")
-* --sample_number: Assign a positive integer(MAX: 2833180) of sampling for training. (Default: 100000)
-* --re_test: Generate a test file for testing again. (True or False. Default: False)
-* --test: If "--re_test" is needed, assign a output path for the training file. (path/to/test, default: "test.csv")
+* --option: Fit the Random Forest Classifier model again and save it (retrain) or Predict the result by saved model directly (predict). (default: predict)
+* --output: Specify the output (path/to/test, default: "test.csv")
