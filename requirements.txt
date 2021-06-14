@@ -1,0 +1,6 @@
+tqdm==4.59.0
+numpy==1.18.5
+geopy==2.1.0
+pandas==1.2.4
+joblib==1.0.1
+scikit_learn==0.24.2
