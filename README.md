@@ -7,7 +7,7 @@ CPU: Intel i7-9700K
 
 Python version: 3.8.8
 
-Please download the data.zip from the google drive's link below with **NCKU's gsuite account** and unarchieve it to the folder.
+Please download the data.zip from the google drive's link below and unarchieve the data folder under the main folder.
 
 [Google Drive download link](https://drive.google.com/file/d/1qBxp2qyWMJFQ6AFF3c5ZMSsUZzxkH2KF/view?usp=sharing) 
 ## Environment Setting
@@ -21,9 +21,9 @@ $ python data.py
 ```
 (The execution of data.py is optional because the required data has been generated in repo and it takes about 45 minutes to finish.)
 ```
-$ python main.py --option predict --output submission.csv
+$ python main.py --model rfc --output submission.csv
 ```
 Argument List:
-* --option: Fit the Random Forest Classifier model again and save it (retrain) or Predict the result by saved model directly (predict). (default: predict)
-* --output: Specify the output (path/to/test, default: "test.csv")
+* --option: Choose the ML method from RandomForest(rfc) or LightGBM(lgb). (default: predict)
+* --output: Specify the output (path/to/submission, default: "submission.csv")
 
