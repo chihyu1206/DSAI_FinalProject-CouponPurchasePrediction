@@ -24,6 +24,6 @@ $ python data.py
 $ python main.py --model rfc --output submission.csv
 ```
 Argument List:
-* --option: Choose the ML method from RandomForest(rfc) or LightGBM(lgb). (default: predict)
-* --output: Specify the output (path/to/submission, default: "submission.csv")
+* --option: Choose the ML method from RandomForest(rfc) or LightGBM(lgb). (default: rfc)
+* --output: Specify the output (path/to/submission, default: submission.csv)
 

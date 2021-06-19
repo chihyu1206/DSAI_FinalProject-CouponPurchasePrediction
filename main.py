@@ -15,8 +15,8 @@ def config():
 DIR = "./data"
 
 # Load the data
-train = joblib.load("coupon_list_train.pkl").sample(frac=1, random_state=0).reset_index(drop=True)
-test =  joblib.load("coupon_list_test.pkl")
+train = joblib.load(os.path.join(DIR, "coupon_list_train.pkl")).sample(frac=1, random_state=0).reset_index(drop=True)
+test =  joblib.load(os.path.join(DIR, "coupon_list_test.pkl"))
 submission = pd.read_csv(os.path.join(DIR,'sample_submission.csv'))
 
 # Preprocess the loaded data

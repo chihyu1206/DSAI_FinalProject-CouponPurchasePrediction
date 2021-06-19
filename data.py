@@ -158,7 +158,7 @@ dataset[['PRICE_RATE', 'CATALOG_PRICE', 'DISCOUNT_PRICE', 'DISPPERIOD', 'VALIDPE
 dataset[['USABLE_DATE_MON', 'USABLE_DATE_TUE','USABLE_DATE_WED', 'USABLE_DATE_THU', 'USABLE_DATE_FRI', 'USABLE_DATE_SAT', 'USABLE_DATE_SUN', 'USABLE_DATE_HOLIDAY', 'USABLE_DATE_BEFORE_HOLIDAY']] = dataset[['USABLE_DATE_MON', 'USABLE_DATE_TUE','USABLE_DATE_WED', 'USABLE_DATE_THU', 'USABLE_DATE_FRI', 'USABLE_DATE_SAT', 'USABLE_DATE_SUN', 'USABLE_DATE_HOLIDAY', 'USABLE_DATE_BEFORE_HOLIDAY']].astype(np.int8)
 dataset[['LATITUDE_USER', 'LONGITUDE_USER', 'LATITUDE_COUPON', 'LONGITUDE_COUPON']] = dataset[['LATITUDE_USER', 'LONGITUDE_USER', 'LATITUDE_COUPON', 'LONGITUDE_COUPON']].astype(np.float64)
 
-joblib.dump(dataset, "coupon_list_train.pkl")
+joblib.dump(dataset, os.path.join(DIR, "coupon_list_train.pkl"))
 
 print("---Create Testing Data---")
 # Permutation of User-Coupon Test
@@ -188,5 +188,5 @@ coupon_list_test_df[['PRICE_RATE', 'CATALOG_PRICE', 'DISCOUNT_PRICE', 'DISPPERIO
 coupon_list_test_df[['USABLE_DATE_MON', 'USABLE_DATE_TUE','USABLE_DATE_WED', 'USABLE_DATE_THU', 'USABLE_DATE_FRI', 'USABLE_DATE_SAT', 'USABLE_DATE_SUN', 'USABLE_DATE_HOLIDAY', 'USABLE_DATE_BEFORE_HOLIDAY']] = coupon_list_test_df[['USABLE_DATE_MON', 'USABLE_DATE_TUE','USABLE_DATE_WED', 'USABLE_DATE_THU', 'USABLE_DATE_FRI', 'USABLE_DATE_SAT', 'USABLE_DATE_SUN', 'USABLE_DATE_HOLIDAY', 'USABLE_DATE_BEFORE_HOLIDAY']].astype(np.int8)
 coupon_list_test_df[['LATITUDE_USER', 'LONGITUDE_USER', 'LATITUDE_COUPON', 'LONGITUDE_COUPON']] = coupon_list_test_df[['LATITUDE_USER', 'LONGITUDE_USER', 'LATITUDE_COUPON', 'LONGITUDE_COUPON']].astype(np.float64)
 
-joblib.dump(coupon_list_test_df, "coupon_list_test.pkl")
+joblib.dump(coupon_list_test_df, os.path.join(DIR, "coupon_list_test.pkl"))
 
