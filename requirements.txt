@@ -1,6 +1,7 @@
-tqdm==4.59.0
-numpy==1.18.5
+joblib==1.0.1
 geopy==2.1.0
 pandas==1.2.4
-joblib==1.0.1
+tqdm==4.59.0
+numpy==1.18.5
+lightgbm==2.3.0
 scikit_learn==0.24.2

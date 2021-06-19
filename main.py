@@ -4,11 +4,12 @@ import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 import joblib
 import argparse
+import lightgbm as lgb
 
 def config():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--option", default="predict", help="Fit the RFC model again and save it (retrain) or Predict the result by saved model directly (predict)")
-    parser.add_argument("--output", default="submission.csv", help="Specify the path to submission result")
+    parser.add_argument("--model", default="rfc", help="Choose the ML method from RandomForest(rfc) or LightGBM(lgb) (default: rfc)")
+    parser.add_argument("--output", default="submission.csv", help="Specify the path of submission result (default: submission.csv)")
     return parser.parse_args()
 
 DIR = "./data"
@@ -33,15 +34,15 @@ x_test_d.fillna(0, inplace=True)
 
 parser = config()    
 # Training
-if parser.option == "predict":
-    rfc = joblib.load("RFC.mdl")
+if parser.model == "rfc":
+    clf = RandomForestClassifier(random_state=0, verbose=1, n_jobs=-1, n_estimators=240, class_weight="balanced_subsample")
+    clf.fit(x_train_d, y_train)
 else:
-    rfc = RandomForestClassifier(random_state=0, verbose=1, n_jobs=-1, n_estimators=240, class_weight="balanced_subsample")
-    rfc.fit(x_train_d, y_train)
-    joblib.dump(rfc, "RFC.mdl")
-
+    clf = lgb.LGBMClassifier(objective="binary", verbose=1, n_jobs=-1, class_weight="balanced", n_estimators=300)
+    clf.fit(x_train_d, y_train)
+    
 # Prediction
-y_pred = rfc.predict_proba(x_test_d)
+y_pred = clf.predict_proba(x_test_d)
 sub = test[['USER_ID_hash','COUPON_ID_hash']]
 sub['TARGET'] = y_pred[:,1]
     
