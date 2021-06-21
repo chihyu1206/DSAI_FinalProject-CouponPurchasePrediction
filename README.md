@@ -25,7 +25,7 @@ $ pip install -r requirement.txt
 ```
 $ python data.py
 ```
-(The execution of data.py is optional because the required data has been generated in repo and it takes about 45 minutes to finish.)
+(The execution of data.py is **optional** because the required data has been generated in repo and it takes about 45 minutes to finish.)
 ```
 $ python main.py --model rfc --output submission.csv
 ```
@@ -43,3 +43,10 @@ Ranking in top 9% (107 / 1072 teams)
 Ranking in 48% (521 / 1072 teams)
 ![image](https://github.com/chihyu1206/DSAI_FinalProject-CouponPurchasePrediction/blob/main/Result/LightGBM.jpg)
 ![image](https://github.com/chihyu1206/DSAI_FinalProject-CouponPurchasePrediction/blob/main/Result/LightGBMranking.jpg)
+
+## Classification Report
+### LightGBM
+![image](https://github.com/chihyu1206/DSAI_FinalProject-CouponPurchasePrediction/blob/main/Result/LightGBM_ClassificationReport.jpg)
+
+### Random Forest
+![image](https://github.com/chihyu1206/DSAI_FinalProject-CouponPurchasePrediction/blob/main/Result/RandomForest_ClassificationReport.jpg)
