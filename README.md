@@ -9,6 +9,8 @@ Python version: 3.8.8
 
 Please download the data.zip from the google drive's link below and unarchieve the data folder under the main folder.
 
+(./DSAI_FinalProject-CouponPurchasePrediction/data/)
+
 [Google Drive download link](https://drive.google.com/file/d/19uqDb53Mo1mdgefnp24-GfvVTPTG-Z80/view?usp=sharing)
 
 [期末Project詳細報告](https://docs.google.com/document/d/1RT6mosSeknuJ0tAtgALxZS4BoPC5sGvSbj0iDR5L0bM/edit?usp=sharing)
