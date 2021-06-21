@@ -13,7 +13,7 @@ Please download the data.zip from the google drive's link below and unarchieve t
 
 [期末Project詳細報告](https://docs.google.com/document/d/1RT6mosSeknuJ0tAtgALxZS4BoPC5sGvSbj0iDR5L0bM/edit?usp=sharing)
 
-[期末Project口頭報告(6/22報告用投影片)]()
+[期末Project口頭報告(6/22報告用投影片)](https://docs.google.com/presentation/d/19A5Q2RBud5VqRUNrgjsPhrZPpTVjT7bFELohMThaJr4/edit?usp=sharing)
 ## Environment Setting
 ```
 $ pip install -r requirement.txt
